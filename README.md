@@ -1,6 +1,6 @@
 # Social Network
 
-![GitHub]()
+![GitHub](https://img.shields.io/github/license/anthonylieu/Module-18-Social-Network-API)
 
 ## Description
 
