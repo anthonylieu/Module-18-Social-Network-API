@@ -1,7 +1,7 @@
 const { Thought, User } = require('../models');
 
 const thoughtController = {
-  //get all thoughts
+  // Retrieve all Thought documents from the database
   getAllThoughts(req, res) {
     Thought.find({})
       .then((dbThoughtData) => res.json(dbThoughtData))
@@ -9,7 +9,7 @@ const thoughtController = {
         res.status(400).json(err);
       });
   },
-  //find one thought by id
+  // Retrieve a single Thought document by its ID
   getThoughtById({ params }, res) {
     Thought.findOne({ _id: params.id })
       .then((dbThoughtData) => {
@@ -21,7 +21,7 @@ const thoughtController = {
       })
       .catch((err) => res.json(err));
   },
-  //create a new thought
+  // Create a new Thought document and associate it with a User document
   createThought({ params, body }, res) {
     Thought.create(body)
       .then(({ _id }) => {
@@ -40,7 +40,7 @@ const thoughtController = {
       })
       .catch((err) => res.status(400).json(err));
   },
-  // update thought by id
+  // Update an existing Thought document by its ID
   updateThought({ params, body }, res) {
     Thought.findOneAndUpdate({ _id: params.id }, body, { new: true })
       .then((dbThoughtData) => {
@@ -54,7 +54,7 @@ const thoughtController = {
         res.status(400).json(err);
       });
   },
-  //add reaction
+  // Add a new reaction to an existing Thought document
   addReaction({ params, body }, res) {
     Thought.findOneAndUpdate(
       { _id: params.thoughtId },
@@ -73,7 +73,7 @@ const thoughtController = {
         res.status(400).json(err);
       });
   },
-  //remove reaction
+ // Remove a reaction from an existing Thought document
   removeReaction({ params }, res) {
     Thought.findOneAndUpdate(
       { _id: params.thoughtId },
@@ -83,7 +83,7 @@ const thoughtController = {
       .then((dbThoughtData) => res.json(dbThoughtData))
       .catch((err) => res.json(err));
   },
-  // delete thought by id
+  // Delete an existing Thought document by its ID and update the associated User document
   deleteThought({ params }, res) {
     Thought.findOneAndDelete({ _id: params.thoughtId })
       .then((dbThoughtData) => {
