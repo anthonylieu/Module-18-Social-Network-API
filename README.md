@@ -22,8 +22,7 @@ This Social Network API allows you to connect connect with friends, share conten
 
 ## Usage
 
-Here is a sample video on how it works.
-![Gif demo of teamgenerator]()
+[Walkthrough Video](https://drive.google.com/file/d/1v9mPxMlO3Uurju7D3C59v_k7Qx24OeaZ/view)
 
 ## License
 
