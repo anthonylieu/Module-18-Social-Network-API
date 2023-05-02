@@ -6,7 +6,7 @@
 
 This Social Network API allows you to connect connect with friends, share content, and have your thought reacted to.  
 
-## table of Contents
+## Table of Contents
 
 - [Installation](#Installation)
 - [Usage](#Usage)
