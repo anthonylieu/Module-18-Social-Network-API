@@ -10,21 +10,22 @@ const {
   deleteThought,
 } = require('../../controllers/thought-controller');
 
-// /api/thoughts
+// Route for retrieving all Thought documents: GET /api/thoughts
 router.route('/').get(getAllThoughts);
 
-// /api/thoughts/:userId
+// Route for creating a new Thought document and associating it with a User: POST /api/thoughts/:userId
 router.route('/:userId').post(createThought);
 
-// /api/thoughts/:id
+// Routes for retrieving and updating a Thought document by its ID: GET and PUT /api/thoughts/:id
 router.route('/:id').get(getThoughtById).put(updateThought);
 
+// Route for deleting a Thought document by its ID and updating the associated User: DELETE /api/thoughts/:userId/:thoughtId
 router.route('/:userId/:thoughtId').delete(deleteThought);
 
-// /api/thoughts/:thoughtId/reactions
+// Route for adding a reaction to an existing Thought document: POST /api/thoughts/:thoughtId/reactions
 router.route('/:thoughtId/reactions').post(addReaction);
 
-// /api/thoughts/:thoughtId/:reactionId
+// Route for removing a reaction from an existing Thought document: DELETE /api/thoughts/:thoughtId/reactions/:reactionId
 router.route('/:thoughtId/reactions/:reactionId').delete(removeReaction);
 
 module.exports = router;
