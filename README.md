@@ -14,7 +14,6 @@ This Social Network API allows you to connect connect with friends, share conten
 - [License](#License)
 
 ## Installation
-
 <br>To get this app to work:</br>
 <br>Clone this repo.</br>
 <br>Then `npm i` and make sure you have mongoose and express.js as dependencies</br>
@@ -30,6 +29,6 @@ MIT
 
 ## Questions
 
-GitHub: anthonylieu
+GitHub: [anthonylieu](https://github.com/anthonylieu/)
 
 Email: anthonylieu1@gmail.com
